@@ -53,6 +53,11 @@ public class Ejemplo1Sumador extends javax.swing.JFrame {
 
         JBlimpiar.setForeground(new java.awt.Color(51, 51, 51));
         JBlimpiar.setText("LIMPIAR");
+        JBlimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBlimpiarActionPerformed(evt);
+            }
+        });
 
         JBsumar.setForeground(new java.awt.Color(51, 51, 51));
         JBsumar.setText("SUMAR");
@@ -139,7 +144,9 @@ public class Ejemplo1Sumador extends javax.swing.JFrame {
 
 //<<<<<<< Updated upstream
     private void JBlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBlimpiarActionPerformed
-        // TODO add your handling code here:
+        JTnro1.setText("");
+        JTnro2.setText("");
+        JLresultado.setText("");
     }//GEN-LAST:event_JBlimpiarActionPerformed
 
     private void JBsumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBsumarActionPerformed
