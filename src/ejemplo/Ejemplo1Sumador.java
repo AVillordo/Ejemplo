@@ -145,10 +145,11 @@ public class Ejemplo1Sumador extends javax.swing.JFrame {
     private void JBsumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBsumarActionPerformed
         try {
             int num1 = Integer.parseInt(JTnro1.getText());
-            int num2 = Integer.parseInt(JTnro1.getText());
+            int num2 = Integer.parseInt(JTnro2.getText());
             
             int resultado=num1+num2;
-            JLresultado.setText(resultado+"");
+           
+            JLresultado.setText(resultado+ "");
             
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, e.getMessage()+" No es un numero ");
