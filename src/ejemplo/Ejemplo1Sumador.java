@@ -5,6 +5,8 @@
  */
 package ejemplo;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Conectar
@@ -59,6 +61,11 @@ public class Ejemplo1Sumador extends javax.swing.JFrame {
 
         JBsumar.setForeground(new java.awt.Color(51, 51, 51));
         JBsumar.setText("SUMAR");
+        JBsumar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBsumarActionPerformed(evt);
+            }
+        });
 
         JLresultado.setForeground(new java.awt.Color(153, 0, 204));
         JLresultado.setText("RESULTADO");
@@ -138,6 +145,20 @@ public class Ejemplo1Sumador extends javax.swing.JFrame {
     private void JBlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBlimpiarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JBlimpiarActionPerformed
+
+    private void JBsumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBsumarActionPerformed
+        try {
+            int num1 = Integer.parseInt(JTnro1.getText());
+            int num2 = Integer.parseInt(JTnro1.getText());
+            
+            int resultado=num1+num2;
+            JLresultado.setText(resultado+"");
+            
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage()+" No es un numero ");
+        }
+
+    }//GEN-LAST:event_JBsumarActionPerformed
 
     /**
      * @param args the command line arguments
